@@ -56,12 +56,12 @@ CognGateAudioProcessorEditor::CognGateAudioProcessorEditor (CognGateAudioProcess
 
     // ── State indicator labels ──────────────────────────────────────────────
     stateLabel.setJustificationType (juce::Justification::centred);
-    stateLabel.setFont (juce::FontOptions (18.0f, juce::Font::bold));
+    stateLabel.setFont (juce::Font (18.0f, juce::Font::bold));
     stateLabel.setColour (juce::Label::textColourId, juce::Colour (0xff00d2ff));
     addAndMakeVisible (stateLabel);
 
     gainLabel.setJustificationType (juce::Justification::centredLeft);
-    gainLabel.setFont (juce::FontOptions (13.0f));
+    gainLabel.setFont (juce::Font (13.0f));
     gainLabel.setColour (juce::Label::textColourId, juce::Colour (0xffaaaaaa));
     addAndMakeVisible (gainLabel);
 
@@ -88,12 +88,12 @@ void CognGateAudioProcessorEditor::setupSlider (juce::Slider& slider,
 
     label.setText (labelText, juce::dontSendNotification);
     label.setJustificationType (juce::Justification::centredLeft);
-    label.setFont (juce::FontOptions (14.0f));
+    label.setFont (juce::Font (14.0f));
     label.setColour (juce::Label::textColourId, juce::Colour (0xffcccccc));
     addAndMakeVisible (label);
 
     valueLabel.setJustificationType (juce::Justification::centredRight);
-    valueLabel.setFont (juce::FontOptions (12.0f));
+    valueLabel.setFont (juce::Font (12.0f));
     valueLabel.setColour (juce::Label::textColourId, juce::Colour (0xff888888));
     addAndMakeVisible (valueLabel);
 }
@@ -110,12 +110,12 @@ void CognGateAudioProcessorEditor::paint (juce::Graphics& g)
 
     // Title
     g.setColour (juce::Colour (0xff00d2ff));
-    g.setFont (juce::FontOptions (22.0f, juce::Font::bold));
+    g.setFont (juce::Font (22.0f, juce::Font::bold));
     g.drawText ("CognGate", getLocalBounds().removeFromTop (44), juce::Justification::centred);
 
     // Subtitle
     g.setColour (juce::Colour (0xff667788));
-    g.setFont (juce::FontOptions (11.0f));
+    g.setFont (juce::Font (11.0f));
     g.drawText ("Cognitive Brain Training Gate", getLocalBounds().removeFromTop (62).removeFromBottom (18),
                 juce::Justification::centred);
 
