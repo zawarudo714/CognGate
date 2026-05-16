@@ -30,6 +30,8 @@ juce_add_plugin(CognGate
     PRODUCT_NAME             "CognGate"
 )
 
+juce_generate_juce_header(CognGate)
+
 target_sources(CognGate
     PRIVATE
         Source/PluginProcessor.cpp
