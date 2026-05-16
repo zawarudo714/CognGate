@@ -5,7 +5,6 @@ project(CognGate VERSION 1.0.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# ── Fetch JUCE ───────────────────────────────────────────────────────────────
 include(FetchContent)
 FetchContent_Declare(
     JUCE
@@ -15,7 +14,6 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(JUCE)
 
-# ── Plugin target ────────────────────────────────────────────────────────────
 juce_add_plugin(CognGate
     COMPANY_NAME            "CognGateAudio"
     IS_SYNTH                FALSE
@@ -23,7 +21,7 @@ juce_add_plugin(CognGate
     NEEDS_MIDI_OUTPUT       FALSE
     IS_MIDI_EFFECT          FALSE
     EDITOR_WANTS_KEYBOARD_FOCUS FALSE
-    COPY_PLUGIN_AFTER_BUILD TRUE
+    COPY_PLUGIN_AFTER_BUILD FALSE
     PLUGIN_MANUFACTURER_CODE CgAt
     PLUGIN_CODE              CgGt
     FORMATS                  VST3 Standalone
